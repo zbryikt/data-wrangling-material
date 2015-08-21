@@ -32,3 +32,7 @@ html(lang="en")
       p: ul
         li: a(href="https://goo.gl/s2wZ18",target="_blank") 冰桶挑戰芳名錄
         li: a(href="https://goo.gl/bE9xLb",target="_blank") 第11屆村里長選舉
+      a(href="#",ng-click="dshow=!!!dshow") more
+      ul(ng-show="dshow")
+        li: a(href="download/mac.dmg") Open Refine Binary Mac
+        li: a(href="download/win.zip") Open Refine Binary Win
