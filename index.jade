@@ -1,8 +1,8 @@
 doctype html
 //- basic libraries: jquery(1.10.2), d3js(3.3.11), angularjs(1.2.3), bootstrap(3.0)/semantic-ui(0.9.3/0.9.5)
-- var usecdn = false
+- var usecdn = true
 - var useog = false
-- var lib = { jquery: true, d3js: true, angular: true, bootstrap: false, semantic: true }
+- var lib = { jquery: true, d3js: true, angular: true, bootstrap: true, semantic: false }
 - var assets = "assets"
 - var thumbnail = "http://dummy.thumbnail"
 html(lang="en")
@@ -14,10 +14,14 @@ html(lang="en")
     // custom files
     link(rel="stylesheet",type="text/css",href="index.css")
     script(type="text/javascript",src="index.js")
-  body
+  body(ng-app="main",ng-controller="main")
     #root
       h1 迎戰壞資料 - 實用工具與技巧
-      h3: a(href="http://104.155.199.172") Open Refine Website
+      h2: a(href="http://104.155.199.172") Open Refine Website
+      a(href="#",ng-click="show=!!!show") more
+      ul(ng-show="show")
+        li: a(href="http://104.155.199.172") Open Refine Website 1
+        li: a(href="http://130.211.247.120") Open Refine Website 2
 
       h3 下載檔案 ( excel, csv )
       p: ul
